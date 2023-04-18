@@ -1,0 +1,8 @@
+body{
+    background-color: bisque;
+    background-image: url(../Media/background.jpg);
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position:center;
+}

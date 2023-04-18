@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form : onsubmit</title>
+</head>
+<body>
+    <form name="my_form" onsubmit="return valid()" method="post">
+        <!-- <input type="text" name="uname" id="uname" required> -->
+        <input type="text" name="uname" id="uname">
+        <span id="uerr"></span>
+        <input type="password" name="passw" id="passw">
+
+        <input type="submit" name="" id="">
+    </form>
+    <script>
+        function valid(){
+            // document.write('hello');
+            var uname=document.forms["my_form"]["uname"].value;
+            // document.write(uname);
+            if(uname==''){
+                // alert('Enter ur User Name');
+                // document.getElementById('uerr').innerHTML="Name is too short";
+                document.write('error in uname');
+                return false;
+            }
+            else if(uname.length<=3){
+                alert('Name is too short');
+                return false;
+            }
+        }
+    </script>
+</body>
+</html>
